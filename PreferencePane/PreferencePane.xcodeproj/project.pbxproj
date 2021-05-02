@@ -31,10 +31,7 @@
 		1BC3364210BFA5A7000DB964 /* CommandTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3364010BFA5A7000DB964 /* CommandTableView.m */; };
 		1BC3364510BFA5B0000DB964 /* LinkTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC3364310BFA5B0000DB964 /* LinkTextField.h */; };
 		1BC3364610BFA5B0000DB964 /* LinkTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3364410BFA5B0000DB964 /* LinkTextField.m */; };
-		1BF4317D10F460F5005DC569 /* Jitouch.app in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4317C10F460F5005DC569 /* Jitouch.app */; };
 		1BF4319610F462A8005DC569 /* jitouchicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4319510F462A8005DC569 /* jitouchicon.icns */; };
-		7B10BDD615F947D90062660F /* JitouchPref.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B10BDD415F947D90062660F /* JitouchPref.png */; };
-		7B10BDD715F947D90062660F /* JitouchPref@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B10BDD515F947D90062660F /* JitouchPref@2x.png */; };
 		7B703DA9262EBC90002157DD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B703DA8262EBC90002157DD /* IOKit.framework */; };
 		7B703DAB262EBC94002157DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B703DAA262EBC94002157DD /* Cocoa.framework */; };
 		7B703DAD262EBC98002157DD /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B703DAC262EBC98002157DD /* Carbon.framework */; };
@@ -47,6 +44,7 @@
 		A8B03D6E10F8DAEA00A9397E /* RecognitionTab.h in Headers */ = {isa = PBXBuildFile; fileRef = A8B03D6C10F8DAEA00A9397E /* RecognitionTab.h */; };
 		A8B4F4711100DEC300290CC4 /* AutoSetDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A8B4F46F1100DEC300290CC4 /* AutoSetDelegate.h */; };
 		A8B4F4721100DEC300290CC4 /* AutoSetDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B4F4701100DEC300290CC4 /* AutoSetDelegate.m */; };
+		F37F2593263EC5B0000A9093 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F37F2592263EC5B0000A9093 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,10 +72,7 @@
 		1BC3364010BFA5A7000DB964 /* CommandTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandTableView.m; sourceTree = "<group>"; };
 		1BC3364310BFA5B0000DB964 /* LinkTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkTextField.h; sourceTree = "<group>"; };
 		1BC3364410BFA5B0000DB964 /* LinkTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkTextField.m; sourceTree = "<group>"; };
-		1BF4317C10F460F5005DC569 /* Jitouch.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = Jitouch.app; sourceTree = "<group>"; };
 		1BF4319510F462A8005DC569 /* jitouchicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = jitouchicon.icns; sourceTree = "<group>"; };
-		7B10BDD415F947D90062660F /* JitouchPref.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JitouchPref.png; sourceTree = "<group>"; };
-		7B10BDD515F947D90062660F /* JitouchPref@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JitouchPref@2x.png"; sourceTree = "<group>"; };
 		7B703D8D262E9F7F002157DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/JitouchPref.xib; sourceTree = "<group>"; };
 		7B703DA8262EBC90002157DD /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		7B703DAA262EBC94002157DD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -90,6 +85,7 @@
 		A8B03D6C10F8DAEA00A9397E /* RecognitionTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecognitionTab.h; sourceTree = "<group>"; };
 		A8B4F46F1100DEC300290CC4 /* AutoSetDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSetDelegate.h; sourceTree = "<group>"; };
 		A8B4F4701100DEC300290CC4 /* AutoSetDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSetDelegate.m; sourceTree = "<group>"; };
+		F37F2592263EC5B0000A9093 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		F506C03C013D9D7901CA16C8 /* JitouchPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JitouchPref.h; sourceTree = "<group>"; };
 		F506C03D013D9D7901CA16C8 /* JitouchPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JitouchPref.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +109,7 @@
 		089C166AFE841209C02AAC07 /* Jitouch */ = {
 			isa = PBXGroup;
 			children = (
+				F37F2592263EC5B0000A9093 /* Media.xcassets */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				7B703DA7262EBC90002157DD /* Frameworks */,
@@ -124,10 +121,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7B10BDD415F947D90062660F /* JitouchPref.png */,
-				7B10BDD515F947D90062660F /* JitouchPref@2x.png */,
 				1BF4319510F462A8005DC569 /* jitouchicon.icns */,
-				1BF4317C10F460F5005DC569 /* Jitouch.app */,
 				8D202CF70486D31800D8A456 /* Info.plist */,
 				F506C042013D9D8C01CA16C8 /* JitouchPref.xib */,
 			);
@@ -247,7 +241,7 @@
 			attributes = {
 				LastUpgradeCheck = 1240;
 			};
-			buildConfigurationList = 1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "Jitouch" */;
+			buildConfigurationList = 1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "PreferencePane" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 1;
@@ -269,11 +263,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F37F2593263EC5B0000A9093 /* Media.xcassets in Resources */,
 				8D202CEF0486D31800D8A456 /* JitouchPref.xib in Resources */,
-				1BF4317D10F460F5005DC569 /* Jitouch.app in Resources */,
 				1BF4319610F462A8005DC569 /* jitouchicon.icns in Resources */,
-				7B10BDD615F947D90062660F /* JitouchPref.png in Resources */,
-				7B10BDD715F947D90062660F /* JitouchPref@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,17 +323,13 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 2.75;
-				DEPLOYMENT_POSTPROCESSING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
 				);
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/MultitouchSupport.framework\"",
@@ -350,7 +338,6 @@
 				MARKETING_VERSION = 2.75;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jitouch.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = Jitouch;
-				STRIP_INSTALLED_PRODUCT = YES;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -366,13 +353,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 2.75;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEPLOYMENT_POSTPROCESSING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
 				);
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/MultitouchSupport.framework\"",
@@ -381,7 +366,6 @@
 				MARKETING_VERSION = 2.75;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jitouch.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = Jitouch;
-				STRIP_INSTALLED_PRODUCT = YES;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -480,7 +464,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "Jitouch" */ = {
+		1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "PreferencePane" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DBD214D08BA80EA00186707 /* Debug */,

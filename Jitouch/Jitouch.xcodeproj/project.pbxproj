@@ -15,28 +15,17 @@
 		1BF5AA6F10790134000CF532 /* Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF5AA6E10790134000CF532 /* Gesture.m */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* JitouchAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* JitouchAppDelegate.m */; };
-		7B24200A15F945D000EDAD3D /* logosmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B24200815F945D000EDAD3D /* logosmall@2x.png */; };
-		7B24200B15F945D000EDAD3D /* logosmalloff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B24200915F945D000EDAD3D /* logosmalloff@2x.png */; };
 		7B703DB7262EBEA6002157DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B703DB6262EBEA6002157DD /* Cocoa.framework */; };
 		7B703DB9262EBEAB002157DD /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B703DB8262EBEAB002157DD /* Carbon.framework */; };
 		7B703DBB262EBEB2002157DD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B703DBA262EBEB1002157DD /* IOKit.framework */; };
 		7B703DBD262EBEB7002157DD /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B703DBC262EBEB7002157DD /* ScriptingBridge.framework */; };
 		7B703DBF262EBED6002157DD /* MultitouchSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B703DBE262EBED6002157DD /* MultitouchSupport.framework */; };
 		7BFB3D2B18612568004A44B6 /* instructions.html in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB3D2518612568004A44B6 /* instructions.html */; };
-		7BFB3D2C18612568004A44B6 /* step1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB3D2618612568004A44B6 /* step1.png */; };
-		7BFB3D2D18612568004A44B6 /* step2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB3D2718612568004A44B6 /* step2.png */; };
-		7BFB3D2E18612568004A44B6 /* step3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB3D2818612568004A44B6 /* step3.png */; };
-		7BFB3D2F18612568004A44B6 /* step4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB3D2918612568004A44B6 /* step4.png */; };
-		7BFB3D3018612568004A44B6 /* step5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB3D2A18612568004A44B6 /* step5.png */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
-		A80A939B10923DC300F92D3F /* move.png in Resources */ = {isa = PBXBuildFile; fileRef = A80A939A10923DC300F92D3F /* move.png */; };
-		A84E89021081B2F30047B86A /* jitouchicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A84E89011081B2F30047B86A /* jitouchicon.icns */; };
+		A84E89021081B2F30047B86A /* JitouchIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A84E89011081B2F30047B86A /* JitouchIcon.icns */; };
 		A85024E7113B2D7600DC6EB3 /* KeyUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A85024E6113B2D7600DC6EB3 /* KeyUtility.m */; };
-		A85BFEC110B8AEFF00201BF7 /* tab.png in Resources */ = {isa = PBXBuildFile; fileRef = A85BFEC010B8AEFF00201BF7 /* tab.png */; };
 		A8D092A4113330360066C837 /* SizeHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D092A3113330360066C837 /* SizeHistory.m */; };
-		A8D4973710918F7E005C3998 /* resize.png in Resources */ = {isa = PBXBuildFile; fileRef = A8D4973610918F7E005C3998 /* resize.png */; };
-		A8DB0A4A10842620000A2A08 /* logosmall.png in Resources */ = {isa = PBXBuildFile; fileRef = A8DB0A4910842620000A2A08 /* logosmall.png */; };
-		A8EB72071085318200563ED4 /* logosmalloff.png in Resources */ = {isa = PBXBuildFile; fileRef = A8EB72061085318200563ED4 /* logosmalloff.png */; };
+		F37F259B263ED98D000A9093 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F37F259A263ED98D000A9093 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,8 +46,6 @@
 		256AC3D90F4B6AC300CF3369 /* JitouchAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JitouchAppDelegate.m; sourceTree = "<group>"; };
 		256AC3F00F4B6AF500CF3369 /* Jitouch_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jitouch_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7B24200815F945D000EDAD3D /* logosmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logosmall@2x.png"; path = "../logosmall@2x.png"; sourceTree = "<group>"; };
-		7B24200915F945D000EDAD3D /* logosmalloff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logosmalloff@2x.png"; path = "../logosmalloff@2x.png"; sourceTree = "<group>"; };
 		7B703D6E262E8775002157DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7B703DB6262EBEA6002157DD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7B703DB8262EBEAB002157DD /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
@@ -67,23 +54,14 @@
 		7B703DBE262EBED6002157DD /* MultitouchSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultitouchSupport.framework; path = System/Library/PrivateFrameworks/MultitouchSupport.framework; sourceTree = SDKROOT; };
 		7BFB3D23186118A3004A44B6 /* SystemPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemPreferences.h; sourceTree = "<group>"; };
 		7BFB3D2518612568004A44B6 /* instructions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = instructions.html; sourceTree = "<group>"; };
-		7BFB3D2618612568004A44B6 /* step1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step1.png; sourceTree = "<group>"; };
-		7BFB3D2718612568004A44B6 /* step2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step2.png; sourceTree = "<group>"; };
-		7BFB3D2818612568004A44B6 /* step3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step3.png; sourceTree = "<group>"; };
-		7BFB3D2918612568004A44B6 /* step4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step4.png; sourceTree = "<group>"; };
-		7BFB3D2A18612568004A44B6 /* step5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step5.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A80A939A10923DC300F92D3F /* move.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = move.png; path = ../move.png; sourceTree = SOURCE_ROOT; };
-		A84E89011081B2F30047B86A /* jitouchicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = jitouchicon.icns; path = ../jitouchicon.icns; sourceTree = SOURCE_ROOT; };
+		A84E89011081B2F30047B86A /* JitouchIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = JitouchIcon.icns; sourceTree = SOURCE_ROOT; };
 		A84E892C1081B6980047B86A /* Jitouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jitouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A85024E5113B2D7600DC6EB3 /* KeyUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyUtility.h; sourceTree = "<group>"; };
 		A85024E6113B2D7600DC6EB3 /* KeyUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyUtility.m; sourceTree = "<group>"; };
-		A85BFEC010B8AEFF00201BF7 /* tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tab.png; path = ../tab.png; sourceTree = SOURCE_ROOT; };
 		A8D092A2113330360066C837 /* SizeHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizeHistory.h; sourceTree = "<group>"; };
 		A8D092A3113330360066C837 /* SizeHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizeHistory.m; sourceTree = "<group>"; };
-		A8D4973610918F7E005C3998 /* resize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = resize.png; path = ../resize.png; sourceTree = SOURCE_ROOT; };
-		A8DB0A4910842620000A2A08 /* logosmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logosmall.png; path = ../logosmall.png; sourceTree = SOURCE_ROOT; };
-		A8EB72061085318200563ED4 /* logosmalloff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logosmalloff.png; path = ../logosmalloff.png; sourceTree = SOURCE_ROOT; };
+		F37F259A263ED98D000A9093 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +103,6 @@
 				A85024E5113B2D7600DC6EB3 /* KeyUtility.h */,
 				A85024E6113B2D7600DC6EB3 /* KeyUtility.m */,
 				7BFB3D23186118A3004A44B6 /* SystemPreferences.h */,
-				7BFB3D2418612568004A44B6 /* instructions */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -141,6 +118,7 @@
 		29B97314FDCFA39411CA2CEA /* Jitouch */ = {
 			isa = PBXGroup;
 			children = (
+				F37F259A263ED98D000A9093 /* Media.xcassets */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -161,14 +139,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A85BFEC010B8AEFF00201BF7 /* tab.png */,
-				A80A939A10923DC300F92D3F /* move.png */,
-				A8D4973610918F7E005C3998 /* resize.png */,
-				A8EB72061085318200563ED4 /* logosmalloff.png */,
-				7B24200915F945D000EDAD3D /* logosmalloff@2x.png */,
-				A8DB0A4910842620000A2A08 /* logosmall.png */,
-				7B24200815F945D000EDAD3D /* logosmall@2x.png */,
-				A84E89011081B2F30047B86A /* jitouchicon.icns */,
+				7BFB3D2518612568004A44B6 /* instructions.html */,
+				A84E89011081B2F30047B86A /* JitouchIcon.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -188,20 +160,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7BFB3D2418612568004A44B6 /* instructions */ = {
-			isa = PBXGroup;
-			children = (
-				7BFB3D2518612568004A44B6 /* instructions.html */,
-				7BFB3D2618612568004A44B6 /* step1.png */,
-				7BFB3D2718612568004A44B6 /* step2.png */,
-				7BFB3D2818612568004A44B6 /* step3.png */,
-				7BFB3D2918612568004A44B6 /* step4.png */,
-				7BFB3D2A18612568004A44B6 /* step5.png */,
-			);
-			name = instructions;
-			path = ../instructions;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,7 +170,6 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				7BB8604815DA332C00031122 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -254,41 +211,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BFB3D3018612568004A44B6 /* step5.png in Resources */,
-				7BFB3D2C18612568004A44B6 /* step1.png in Resources */,
-				7BFB3D2F18612568004A44B6 /* step4.png in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
-				A84E89021081B2F30047B86A /* jitouchicon.icns in Resources */,
-				7BFB3D2D18612568004A44B6 /* step2.png in Resources */,
-				A8DB0A4A10842620000A2A08 /* logosmall.png in Resources */,
+				A84E89021081B2F30047B86A /* JitouchIcon.icns in Resources */,
 				7BFB3D2B18612568004A44B6 /* instructions.html in Resources */,
-				A8EB72071085318200563ED4 /* logosmalloff.png in Resources */,
-				A8D4973710918F7E005C3998 /* resize.png in Resources */,
-				A80A939B10923DC300F92D3F /* move.png in Resources */,
-				7BFB3D2E18612568004A44B6 /* step3.png in Resources */,
-				A85BFEC110B8AEFF00201BF7 /* tab.png in Resources */,
-				7B24200A15F945D000EDAD3D /* logosmall@2x.png in Resources */,
-				7B24200B15F945D000EDAD3D /* logosmalloff@2x.png in Resources */,
+				F37F259B263ED98D000A9093 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7BB8604815DA332C00031122 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "rm -rf ../../prefpane/Jitouch.app\ncp -R \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\" ../../prefpane\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -329,23 +259,19 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 2.75;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEPLOYMENT_POSTPROCESSING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
 					"\"$(SRCROOT)\"",
 				);
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Jitouch_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				MARKETING_VERSION = 2.75;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jitouch.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Jitouch;
-				STRIP_INSTALLED_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -358,20 +284,17 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 2.75;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEPLOYMENT_POSTPROCESSING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
 					"\"$(SRCROOT)\"",
 				);
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Jitouch_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				MARKETING_VERSION = 2.75;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jitouch.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Jitouch;
-				STRIP_INSTALLED_PRODUCT = YES;
 			};
 			name = Release;
 		};
