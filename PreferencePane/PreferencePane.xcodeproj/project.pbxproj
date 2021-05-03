@@ -213,9 +213,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8D202CE80486D31800D8A456 /* Jitouch */ = {
+		8D202CE80486D31800D8A456 /* PreferencePane */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "Jitouch" */;
+			buildConfigurationList = 1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "PreferencePane" */;
 			buildPhases = (
 				8D202CE90486D31800D8A456 /* Headers */,
 				8D202CEC0486D31800D8A456 /* Resources */,
@@ -227,7 +227,7 @@
 			);
 			dependencies = (
 			);
-			name = Jitouch;
+			name = PreferencePane;
 			productInstallPath = "$(HOME)/Library/PreferencePanes";
 			productName = Jitouch;
 			productReference = 8D202CF80486D31800D8A456 /* Jitouch.prefPane */;
@@ -253,7 +253,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D202CE80486D31800D8A456 /* Jitouch */,
+				8D202CE80486D31800D8A456 /* PreferencePane */,
 			);
 		};
 /* End PBXProject section */
@@ -455,7 +455,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "Jitouch" */ = {
+		1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "PreferencePane" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DBD214908BA80EA00186707 /* Debug */,
