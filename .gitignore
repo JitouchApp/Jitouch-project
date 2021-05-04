@@ -4,3 +4,6 @@ Pods/
 # Xcode
 project.xcworkspace
 xcuserdata
+
+# xcodebuild
+build/
