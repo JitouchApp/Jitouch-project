@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D3182E756BC0097B82D8148 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DB2999C6C42D80AD792CAD /* Pods_Application.framework */; };
 		F37F26C72641B9F2000A9093 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F37F26C62641B9F2000A9093 /* Media.xcassets */; };
 		F37F26ED2641BA63000A9093 /* JitouchPref.h in Headers */ = {isa = PBXBuildFile; fileRef = F37F26CF2641BA62000A9093 /* JitouchPref.h */; };
 		F37F26EE2641BA63000A9093 /* GesturePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37F26D02641BA62000A9093 /* GesturePreviewView.m */; };
@@ -68,16 +69,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F37F277F2641C15C000A9093 /* PBXContainerItemProxy */ = {
+		F37F27902641DA1A000A9093 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F37F26A72641B960000A9093 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F37F27292641BD8D000A9093;
-			remoteInfo = Jitouch;
+			remoteInfo = Application;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8C9E1A3994EB96188571663 /* Pods-Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application.debug.xcconfig"; path = "Target Support Files/Pods-Application/Pods-Application.debug.xcconfig"; sourceTree = "<group>"; };
+		B8DB2999C6C42D80AD792CAD /* Pods_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC3EC7850319B90435ACE902 /* Pods-Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application.release.xcconfig"; path = "Target Support Files/Pods-Application/Pods-Application.release.xcconfig"; sourceTree = "<group>"; };
 		F37F26B02641B960000A9093 /* Jitouch.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jitouch.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37F26C62641B9F2000A9093 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = PreferencePane/Media.xcassets; sourceTree = "<group>"; };
 		F37F26CF2641BA62000A9093 /* JitouchPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JitouchPref.h; path = PreferencePane/JitouchPref.h; sourceTree = "<group>"; };
@@ -171,18 +175,39 @@
 				F37F27782641BE25000A9093 /* MultitouchSupport.framework in Frameworks */,
 				F37F277A2641BE25000A9093 /* ScriptingBridge.framework in Frameworks */,
 				F37F27772641BE25000A9093 /* IOKit.framework in Frameworks */,
+				3D3182E756BC0097B82D8148 /* Pods_Application.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D66622F5F9B51E7B72B7FDDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8C9E1A3994EB96188571663 /* Pods-Application.debug.xcconfig */,
+				BC3EC7850319B90435ACE902 /* Pods-Application.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DF1BC7FED25885FA8BED4DC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8DB2999C6C42D80AD792CAD /* Pods_Application.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F37F26A62641B960000A9093 = {
 			isa = PBXGroup;
 			children = (
 				F37F27252641BD66000A9093 /* Application */,
 				F37F26CE2641BA4B000A9093 /* PreferencePane */,
 				F37F26B12641B960000A9093 /* Products */,
+				D66622F5F9B51E7B72B7FDDC /* Pods */,
+				DF1BC7FED25885FA8BED4DC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -348,26 +373,28 @@
 			buildRules = (
 			);
 			dependencies = (
-				F37F27802641C15C000A9093 /* PBXTargetDependency */,
+				F37F27912641DA1A000A9093 /* PBXTargetDependency */,
 			);
 			name = PreferencePane;
 			productName = Jitouch;
 			productReference = F37F26B02641B960000A9093 /* Jitouch.prefPane */;
 			productType = "com.apple.product-type.bundle";
 		};
-		F37F27292641BD8D000A9093 /* Jitouch */ = {
+		F37F27292641BD8D000A9093 /* Application */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F37F27382641BD90000A9093 /* Build configuration list for PBXNativeTarget "Jitouch" */;
+			buildConfigurationList = F37F27382641BD90000A9093 /* Build configuration list for PBXNativeTarget "Application" */;
 			buildPhases = (
+				39590E35937708AFF8B0F2E3 /* [CP] Check Pods Manifest.lock */,
 				F37F27262641BD8D000A9093 /* Sources */,
 				F37F27272641BD8D000A9093 /* Frameworks */,
 				F37F27282641BD8D000A9093 /* Resources */,
+				3AD6699EF77D3EDD98F9BCAB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Jitouch;
+			name = Application;
 			productName = Jitouch;
 			productReference = F37F272A2641BD8D000A9093 /* Jitouch.app */;
 			productType = "com.apple.product-type.application";
@@ -401,7 +428,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F37F27292641BD8D000A9093 /* Jitouch */,
+				F37F27292641BD8D000A9093 /* Application */,
 				F37F26AF2641B960000A9093 /* PreferencePane */,
 			);
 		};
@@ -431,6 +458,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39590E35937708AFF8B0F2E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Application-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AD6699EF77D3EDD98F9BCAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Application/Pods-Application-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Application/Pods-Application-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Application/Pods-Application-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F37F26AC2641B960000A9093 /* Sources */ = {
@@ -475,10 +544,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F37F27802641C15C000A9093 /* PBXTargetDependency */ = {
+		F37F27912641DA1A000A9093 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F37F27292641BD8D000A9093 /* Jitouch */;
-			targetProxy = F37F277F2641C15C000A9093 /* PBXContainerItemProxy */;
+			target = F37F27292641BD8D000A9093 /* Application */;
+			targetProxy = F37F27902641DA1A000A9093 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -659,6 +728,7 @@
 		};
 		F37F27392641BD90000A9093 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8C9E1A3994EB96188571663 /* Pods-Application.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -674,7 +744,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jitouch.Jitouch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Jitouch;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -685,6 +755,7 @@
 		};
 		F37F273A2641BD90000A9093 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC3EC7850319B90435ACE902 /* Pods-Application.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -700,7 +771,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jitouch.Jitouch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Jitouch;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -730,7 +801,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F37F27382641BD90000A9093 /* Build configuration list for PBXNativeTarget "Jitouch" */ = {
+		F37F27382641BD90000A9093 /* Build configuration list for PBXNativeTarget "Application" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F37F27392641BD90000A9093 /* Debug */,

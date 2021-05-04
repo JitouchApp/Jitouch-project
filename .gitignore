@@ -1,3 +1,6 @@
+# Cocoapods
+Pods/
+
+# Xcode
 project.xcworkspace
 xcuserdata
-/prefpane/Jitouch.app
