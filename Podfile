@@ -9,3 +9,8 @@ target 'Application' do
   pod 'Sparkle', '~> 1.26'
 end
 
+target 'PreferencePane' do
+  use_frameworks!
+
+  pod 'Sparkle', '~> 1.26'
+end

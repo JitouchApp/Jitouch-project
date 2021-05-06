@@ -1,6 +1,7 @@
 /*
  * This file is part of Jitouch.
  *
+ * Copyright 2021 Daniel Herrmann
  * Copyright 2021 Sukolsak Sakshuwong
  * Copyright 2021 Supasorn Suwajanakorn
  *
@@ -20,9 +21,9 @@
  */
 
 #import <PreferencePanes/PreferencePanes.h>
+#import <Sparkle/Sparkle.h>
 
 @class KeyTextView;
-@class Update;
 
 @interface JitouchPref : NSPreferencePane {
     NSWindow *window;
@@ -39,5 +40,6 @@
 
 - (IBAction)change:(id)sender;
 - (void) mainViewDidLoad;
+- (SUUpdater *) updater;
 
 @end

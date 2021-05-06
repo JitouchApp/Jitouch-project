@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3D3182E756BC0097B82D8148 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DB2999C6C42D80AD792CAD /* Pods_Application.framework */; };
+		A6B69AA0B89C02A8E216FFD4 /* Pods_PreferencePane.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF46A539363448A981F4DCC /* Pods_PreferencePane.framework */; };
 		F37F26C72641B9F2000A9093 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F37F26C62641B9F2000A9093 /* Media.xcassets */; };
 		F37F26ED2641BA63000A9093 /* JitouchPref.h in Headers */ = {isa = PBXBuildFile; fileRef = F37F26CF2641BA62000A9093 /* JitouchPref.h */; };
 		F37F26EE2641BA63000A9093 /* GesturePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37F26D02641BA62000A9093 /* GesturePreviewView.m */; };
@@ -79,9 +80,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6AF5AEA065D92EC75048676B /* Pods-PreferencePane.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PreferencePane.release.xcconfig"; path = "Target Support Files/Pods-PreferencePane/Pods-PreferencePane.release.xcconfig"; sourceTree = "<group>"; };
+		7AF46A539363448A981F4DCC /* Pods_PreferencePane.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PreferencePane.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C9E1A3994EB96188571663 /* Pods-Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application.debug.xcconfig"; path = "Target Support Files/Pods-Application/Pods-Application.debug.xcconfig"; sourceTree = "<group>"; };
 		B8DB2999C6C42D80AD792CAD /* Pods_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3EC7850319B90435ACE902 /* Pods-Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application.release.xcconfig"; path = "Target Support Files/Pods-Application/Pods-Application.release.xcconfig"; sourceTree = "<group>"; };
+		D743A7424B43709E8F43194A /* Pods-PreferencePane.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PreferencePane.debug.xcconfig"; path = "Target Support Files/Pods-PreferencePane/Pods-PreferencePane.debug.xcconfig"; sourceTree = "<group>"; };
 		F37F26B02641B960000A9093 /* Jitouch.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jitouch.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37F26C62641B9F2000A9093 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = PreferencePane/Media.xcassets; sourceTree = "<group>"; };
 		F37F26CF2641BA62000A9093 /* JitouchPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JitouchPref.h; path = PreferencePane/JitouchPref.h; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 				F37F271B2641BAB5000A9093 /* Cocoa.framework in Frameworks */,
 				F37F271F2641BAB5000A9093 /* IOKit.framework in Frameworks */,
 				F37F271C2641BAB5000A9093 /* PreferencePanes.framework in Frameworks */,
+				A6B69AA0B89C02A8E216FFD4 /* Pods_PreferencePane.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,8 +192,9 @@
 			children = (
 				A8C9E1A3994EB96188571663 /* Pods-Application.debug.xcconfig */,
 				BC3EC7850319B90435ACE902 /* Pods-Application.release.xcconfig */,
+				D743A7424B43709E8F43194A /* Pods-PreferencePane.debug.xcconfig */,
+				6AF5AEA065D92EC75048676B /* Pods-PreferencePane.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -196,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				B8DB2999C6C42D80AD792CAD /* Pods_Application.framework */,
+				7AF46A539363448A981F4DCC /* Pods_PreferencePane.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -365,10 +372,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F37F26BF2641B960000A9093 /* Build configuration list for PBXNativeTarget "PreferencePane" */;
 			buildPhases = (
+				4CDAB9EB02C3FFE33D0A9FAD /* [CP] Check Pods Manifest.lock */,
 				F37F26AB2641B960000A9093 /* Headers */,
 				F37F26AC2641B960000A9093 /* Sources */,
 				F37F26AD2641B960000A9093 /* Frameworks */,
 				F37F26AE2641B960000A9093 /* Resources */,
+				F37F283126434469000A9093 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -493,6 +502,49 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Application/Pods-Application-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Application/Pods-Application-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CDAB9EB02C3FFE33D0A9FAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PreferencePane-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F37F283126434469000A9093 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Application/Pods-Application-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Application/Pods-Application-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -688,11 +740,12 @@
 		};
 		F37F26C02641B960000A9093 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D743A7424B43709E8F43194A /* Pods-PreferencePane.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/PreferencePane/Info.plist";
+				INFOPLIST_FILE = PreferencePane/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jitouch.Jitouch;
@@ -708,11 +761,12 @@
 		};
 		F37F26C12641B960000A9093 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AF5AEA065D92EC75048676B /* Pods-PreferencePane.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/PreferencePane/Info.plist";
+				INFOPLIST_FILE = PreferencePane/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jitouch.Jitouch;

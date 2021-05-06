@@ -1,6 +1,7 @@
 /*
  * This file is part of Jitouch.
  *
+ * Copyright 2021 Daniel Herrmann
  * Copyright 2021 Sukolsak Sakshuwong
  * Copyright 2021 Supasorn Suwajanakorn
  *
@@ -196,6 +197,10 @@ static CGEventRef CGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEve
 
     mainView = [self mainView];
 
+}
+
+- (SUUpdater *)updater {
+    return [SUUpdater updaterForBundle:[NSBundle bundleForClass:[self class]]];
 }
 
 - (void)willSelect {
