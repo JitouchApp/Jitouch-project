@@ -51,7 +51,8 @@ static inline float mylen(float dx, float dy) {
     static float lastX, lastY;
     float w = self.frame.size.width;
     float h = self.frame.size.height;
-    float x, y;
+    float x = 0.0;
+    float y = 0.0;
 
     if (hg.type) {
         CGContextSetLineJoin(myContext, kCGLineJoinRound);
@@ -552,7 +553,7 @@ static void setFGx(FingerGesture *out, float x1, float y1, float x2, float y2, f
 
         float len = 0;
         float t = 0;
-        float x, y, lastX, lastY;
+        float x, y, lastX = 0.0, lastY = 0.0;
         while (t < 1) {
             x = (1-t)*(1-t)*(1-t)*hg.fg[i].x[0] + 3*(1-t)*(1-t)*t*hg.fg[i].cpx[0] + 3*(1-t)*t*t*hg.fg[i].cpx[1] + t*t*t*hg.fg[i].x[1];
             y = (1-t)*(1-t)*(1-t)*hg.fg[i].y[0] + 3*(1-t)*(1-t)*t*hg.fg[i].cpy[0] + 3*(1-t)*t*t*hg.fg[i].cpy[1] + t*t*t*hg.fg[i].y[1];

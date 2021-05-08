@@ -167,8 +167,8 @@
 					inView: ( NSView * ) controlView
 					editor: ( NSText * ) textObj
 				  delegate: ( id ) anObject
-				  	 start: ( int ) selStart
-				  	length: ( int ) selLength
+				  	 start: ( NSInteger ) selStart
+				  	length: ( NSInteger ) selLength
 {
 	
 	NSRect	textFrame;
@@ -195,7 +195,7 @@
 				  inView: ( NSView * ) controlView
 {
 
-	NSRect	textFrame;
+    NSRect	textFrame = {};
 	
 	if ( image != nil )
 	{

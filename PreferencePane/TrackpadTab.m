@@ -138,7 +138,7 @@
                 usleep(20 * 1000);
             }
             dispatch_async(dispatch_get_main_queue(), ^{
-                [window removeChildWindow:localAttachedWindow];
+                [self->window removeChildWindow:localAttachedWindow];
                 [localAttachedWindow orderOut:self];
             });
         });
