@@ -55,7 +55,6 @@
             [[self menu] insertItem:item atIndex:[[[self menu] itemArray] count]-2];
             [self selectItemAtIndex:[[[self menu] itemArray] count]-3];
         }
-        [item release];
     }
 }
 
@@ -70,7 +69,6 @@
         NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:[allApps objectAtIndex:i] action:nil keyEquivalent:@""];
         [item setImage:[iconDict objectForKey:[allApps objectAtIndex:i]]];
         [[self menu] addItem:item];
-        [item release];
     }
 
     [[self menu] addItem:[NSMenuItem separatorItem]];

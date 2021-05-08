@@ -43,21 +43,20 @@ CGKeyCode keyMap[128]; // for dvorak support
     if (loginListRef) {
         // delete all shortcuts to jitouch in the login items
         UInt32 seedValue;
-        NSArray  *loginItemsArray = (NSArray *)LSSharedFileListCopySnapshot(loginListRef, &seedValue);
+        NSArray  *loginItemsArray = (NSArray *)CFBridgingRelease(LSSharedFileListCopySnapshot(loginListRef, &seedValue));
         for (id item in loginItemsArray) {
-            LSSharedFileListItemRef itemRef = (LSSharedFileListItemRef)item;
+            LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef)item;
             CFURLRef thePath;
             if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &thePath, NULL) == noErr) {
-                NSRange range = [[(NSURL*)thePath path] rangeOfString:@"Jitouch"];
+                NSRange range = [[(__bridge NSURL*)thePath path] rangeOfString:@"Jitouch"];
                 if (range.location != NSNotFound)
                     LSSharedFileListItemRemove(loginListRef, itemRef);
             }
         }
-        [loginItemsArray release];
 
         if (![settings objectForKey:@"StartAtLogin"] || [[settings objectForKey:@"StartAtLogin"] intValue]) {
             // add shortcut to jitouch in the login items (there should be only one shortcut)
-            LSSharedFileListItemRef loginItemRef = LSSharedFileListInsertItemURL(loginListRef,  kLSSharedFileListItemLast, NULL,  NULL, (CFURLRef)jitouchURL, NULL, NULL);
+            LSSharedFileListItemRef loginItemRef = LSSharedFileListInsertItemURL(loginListRef,  kLSSharedFileListItemLast, NULL,  NULL, (__bridge CFURLRef)jitouchURL, NULL, NULL);
 
             if (loginItemRef) {
                 CFRelease(loginItemRef);
@@ -73,17 +72,16 @@ CGKeyCode keyMap[128]; // for dvorak support
     if (loginListRef) {
         // delete all shortcuts to jitouch in the login items
         UInt32 seedValue;
-        NSArray *loginItemsArray = (NSArray *)LSSharedFileListCopySnapshot(loginListRef, &seedValue);
+        NSArray *loginItemsArray = (NSArray *)CFBridgingRelease(LSSharedFileListCopySnapshot(loginListRef, &seedValue));
         for (id item in loginItemsArray) {
-            LSSharedFileListItemRef itemRef = (LSSharedFileListItemRef)item;
+            LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef)item;
             CFURLRef thePath;
             if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &thePath, NULL) == noErr) {
-                NSRange range = [[(NSURL*)thePath path] rangeOfString:@"Jitouch"];
+                NSRange range = [[(__bridge NSURL*)thePath path] rangeOfString:@"Jitouch"];
                 if (range.location != NSNotFound)
                     LSSharedFileListItemRemove(loginListRef, itemRef);
             }
         }
-        [loginItemsArray release];
         CFRelease(loginListRef);
     }
 }
@@ -97,7 +95,7 @@ CGKeyCode keyMap[128]; // for dvorak support
 }
 
 - (void)showIcon {
-    theMenu = [[[NSMenu alloc] initWithTitle:@"Contextual Menu"] autorelease];
+    theMenu = [[NSMenu alloc] initWithTitle:@"Contextual Menu"];
 
     if (enAll)
         [theMenu insertItemWithTitle:@"Turn Jitouch Off" action:@selector(switchChange:) keyEquivalent:@"" atIndex:0];
@@ -111,7 +109,6 @@ CGKeyCode keyMap[128]; // for dvorak support
 
     NSStatusBar *bar = [NSStatusBar systemStatusBar];
     theItem = [bar statusItemWithLength:NSVariableStatusItemLength];
-    [theItem retain];
     [self updateIconImage];
     [theItem setHighlightMode:YES];
     [theItem setMenu:theMenu];
@@ -119,7 +116,6 @@ CGKeyCode keyMap[128]; // for dvorak support
 
 - (void)hideIcon {
     [[NSStatusBar systemStatusBar] removeStatusItem:theItem];
-    [theItem release];
     theItem = nil;
 }
 
@@ -150,7 +146,6 @@ CGKeyCode keyMap[128]; // for dvorak support
         [alert setAlertStyle:NSWarningAlertStyle];
         [NSApp activateIgnoringOtherApps:YES];
         [alert runModal];
-        [alert release];
     }
 }
 
@@ -209,7 +204,7 @@ CGKeyCode keyMap[128]; // for dvorak support
 
 
 - (void)checkAXAPI {
-    AXIsProcessTrustedWithOptions((CFDictionaryRef)@{(id)kAXTrustedCheckOptionPrompt: @(YES)});
+    AXIsProcessTrustedWithOptions((CFDictionaryRef)@{(__bridge id)kAXTrustedCheckOptionPrompt: @(YES)});
 }
 
 /*
@@ -285,13 +280,6 @@ void languageChanged(CFNotificationCenterRef center, void *observer, CFStringRef
                        nil];
     NSTask *restartTask = [NSTask launchedTaskWithLaunchPath:@"/bin/sh" arguments:shArgs];
     [restartTask waitUntilExit]; //wait for killArg1AndOpenArg2Script to finish
-}
-
-#pragma mark -
-
-- (void) dealloc {
-    [cursorWindow release];
-    [super dealloc];
 }
 
 @end

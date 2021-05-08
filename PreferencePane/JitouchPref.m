@@ -127,22 +127,21 @@ static CGEventRef CGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEve
     if (loginListRef) {
         // delete all shortcuts to jitouch in the login items
         UInt32 seedValue;
-        NSArray  *loginItemsArray = (NSArray *)LSSharedFileListCopySnapshot(loginListRef, &seedValue);
+        NSArray  *loginItemsArray = (NSArray *)CFBridgingRelease(LSSharedFileListCopySnapshot(loginListRef, &seedValue));
         for (id item in loginItemsArray) {
-            LSSharedFileListItemRef itemRef = (LSSharedFileListItemRef)item;
+            LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef)item;
             CFURLRef thePath;
             if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &thePath, NULL) == noErr) {
-                NSRange range = [[(NSURL*)thePath path] rangeOfString:@"Jitouch"];
+                NSRange range = [[(__bridge NSURL*)thePath path] rangeOfString:@"Jitouch"];
                 if (range.location != NSNotFound)
                     LSSharedFileListItemRemove(loginListRef, itemRef);
             }
         }
-        [loginItemsArray release];
 
 
         if (![settings objectForKey:@"StartAtLogin"] || [[settings objectForKey:@"StartAtLogin"] intValue]) {
             // add shortcut to jitouch in the login items (there should be only one shortcut)
-            LSSharedFileListItemRef loginItemRef = LSSharedFileListInsertItemURL(loginListRef,  kLSSharedFileListItemLast, NULL,  NULL, (CFURLRef)jitouchURL, NULL, NULL);
+            LSSharedFileListItemRef loginItemRef = LSSharedFileListInsertItemURL(loginListRef,  kLSSharedFileListItemLast, NULL,  NULL, (__bridge CFURLRef)jitouchURL, NULL, NULL);
 
             if (loginItemRef) {
                 CFRelease(loginItemRef);
@@ -182,7 +181,7 @@ static CGEventRef CGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEve
     //}
 
 
-    NSInteger tabIndex;
+    NSInteger tabIndex = 0;
     if ([settings objectForKey:@"LastTab"] && (tabIndex=[mainTabView indexOfTabViewItemWithIdentifier:[settings objectForKey:@"LastTab"]]) != NSNotFound) {
         [mainTabView selectTabViewItemAtIndex:tabIndex];
     } else {
@@ -204,7 +203,7 @@ static CGEventRef CGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEve
 }
 
 - (void)willSelect {
-    BOOL trusted = AXIsProcessTrustedWithOptions((CFDictionaryRef)@{(id)kAXTrustedCheckOptionPrompt: @(YES)});
+    BOOL trusted = AXIsProcessTrustedWithOptions((CFDictionaryRef)@{(__bridge id)kAXTrustedCheckOptionPrompt: @(YES)});
 
     if (trusted && !eventKeyboard) {
         CGEventMask eventMask = CGEventMaskBit(kCGEventKeyDown) | CGEventMaskBit(kCGEventKeyUp);

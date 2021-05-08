@@ -71,14 +71,14 @@ BOOL isPrefPane;
 static int notSynchronize;
 
 + (void)noteSettingsUpdated2 {
-    NSAutoreleasePool *autoreleasepool = [[NSAutoreleasePool alloc] init];
-    [[NSDistributedNotificationCenter defaultCenter] postNotificationName: @"My Notification2"
-                                                                   object: @"com.jitouch.Jitouch.PrefpaneTarget2"
-                                                                 userInfo: @{
-     @"enAll": [NSNumber numberWithInt:enAll]
-     }
-                                                       deliverImmediately: YES];
-    [autoreleasepool release];
+    @autoreleasepool {
+        [[NSDistributedNotificationCenter defaultCenter] postNotificationName: @"My Notification2"
+                                                                       object: @"com.jitouch.Jitouch.PrefpaneTarget2"
+                                                                     userInfo: @{
+         @"enAll": [NSNumber numberWithInt:enAll]
+         }
+                                                           deliverImmediately: YES];
+    }
 }
 
 
@@ -99,7 +99,7 @@ static int notSynchronize;
 }
 
 + (void)setKey:(NSString*)aKey with:(id)aValue {
-    CFPropertyListRef value = (CFPropertyListRef)aValue;
+    CFPropertyListRef value = (__bridge CFPropertyListRef)aValue;
     CFPreferencesSetAppValue((CFStringRef)aKey, value, appID);
     //CFRelease(value);
     if (!notSynchronize)
@@ -128,8 +128,6 @@ static int notSynchronize;
     [apps addObject:app1];
 
     [Settings setKey:@"RecognitionCommands" with:apps];
-    [apps release];
-    [gestures1 release];
 }
 
 + (void)trackpadDefault {
@@ -151,9 +149,6 @@ static int notSynchronize;
     [apps addObject:app1];
 
     [Settings setKey:@"TrackpadCommands" with:apps];
-
-    [apps release];
-    [gestures1 release];
 }
 
 + (void)magicMouseDefault {
@@ -172,8 +167,6 @@ static int notSynchronize;
     NSMutableArray *apps = [[NSMutableArray alloc] init];
     [apps addObject:app1];
     [Settings setKey:@"MagicMouseCommands" with:apps];
-    [apps release];
-    [gestures1 release];
 }
 
 + (void)createDefaultPlist {
@@ -216,7 +209,6 @@ static int notSynchronize;
         return;
 
     if (settings != newSettings) {
-        [settings release];
         settings = [[NSMutableDictionary alloc] initWithDictionary:newSettings];
     }
 
@@ -270,22 +262,18 @@ static int notSynchronize;
                 [gestures setObject:gesture forKey:[gesture objectForKey:@"Gesture"]];
             }
             [map setObject:gestures forKey:appName];
-            [gestures release];
         }
     };
 
     // optimization for trackpad commands
-    [trackpadMap release];
     trackpadMap = [[NSMutableDictionary alloc] init];
     optimize(trackpadCommands, trackpadMap);
 
     // optimization for magicmouse commands
-    [magicMouseMap release];
     magicMouseMap = [[NSMutableDictionary alloc] init];
     optimize(magicMouseCommands, magicMouseMap);
 
     // optimization for recognition commands
-    [recognitionMap release];
     recognitionMap = [[NSMutableDictionary alloc] init];
     optimize(recognitionCommands, recognitionMap);
 }

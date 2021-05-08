@@ -33,7 +33,7 @@ static void languageChanged(CFNotificationCenterRef center, void *observer, CFSt
     for (int i = 0; i < 128; i++)
         a[i] = (CGKeyCode)i;
 
-    NSString *inputSource = (NSString*)TISGetInputSourceProperty(TISCopyCurrentKeyboardInputSource(), kTISPropertyLocalizedName);
+    NSString *inputSource = (__bridge NSString*)TISGetInputSourceProperty(TISCopyCurrentKeyboardInputSource(), kTISPropertyLocalizedName);
     if ([inputSource isEqualToString:@"Dvorak"] || [inputSource isEqualToString:@"Svorak"]) {
         a[13] = 43; //w -> ,
         a[12] = 7;  //q -> x
@@ -57,7 +57,7 @@ static void languageChanged(CFNotificationCenterRef center, void *observer, CFSt
     self = [super init];
     if (self) {
         languageChanged(NULL, NULL, NULL, NULL, NULL);
-        CFNotificationCenterAddObserver(CFNotificationCenterGetDistributedCenter(), self, languageChanged, kTISNotifySelectedKeyboardInputSourceChanged, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
+        CFNotificationCenterAddObserver(CFNotificationCenterGetDistributedCenter(), (__bridge const void *)(self), languageChanged, kTISNotifySelectedKeyboardInputSourceChanged, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
         keyMap = [[NSMutableDictionary alloc] init];
         for (CGKeyCode i = 0; i < 128; i++) {
             [keyMap setObject:[NSNumber numberWithUnsignedInt:i] forKey:[KeyUtility codeToChar:i]];
@@ -97,15 +97,15 @@ static void languageChanged(CFNotificationCenterRef center, void *observer, CFSt
 }
 
 - (void)simulateSpecialKey:(int)key {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    @autoreleasepool {
 
-    NSEvent *event = [NSEvent otherEventWithType:NSSystemDefined location:NSZeroPoint modifierFlags:0xa00 timestamp:0 windowNumber:0 context:NULL subtype:8 data1:(key << 16) | (0xa00) data2:-1];
-    CGEventPost(kCGSessionEventTap, [event CGEvent]);
+        NSEvent *event = [NSEvent otherEventWithType:NSSystemDefined location:NSZeroPoint modifierFlags:0xa00 timestamp:0 windowNumber:0 context:NULL subtype:8 data1:(key << 16) | (0xa00) data2:-1];
+        CGEventPost(kCGSessionEventTap, [event CGEvent]);
 
-    NSEvent *event2 = [NSEvent otherEventWithType:NSSystemDefined location:NSZeroPoint modifierFlags:0xb00 timestamp:0 windowNumber:0 context:NULL subtype:8 data1:(key << 16) | (0xb00) data2:-1];
-    CGEventPost(kCGSessionEventTap, [event2 CGEvent]);
+        NSEvent *event2 = [NSEvent otherEventWithType:NSSystemDefined location:NSZeroPoint modifierFlags:0xb00 timestamp:0 windowNumber:0 context:NULL subtype:8 data1:(key << 16) | (0xb00) data2:-1];
+        CGEventPost(kCGSessionEventTap, [event2 CGEvent]);
 
-    [pool release];
+    }
 }
 
 - (CGKeyCode)charToCode:(NSString*) chr {

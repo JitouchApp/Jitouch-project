@@ -81,14 +81,13 @@
 }
 
 - (void)addPointX:(float)x Y:(float)y {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    @autoreleasepool {
+        CGFloat width = [self frame].size.width - 30 - 150;
+        CGFloat height = [self frame].size.height - 30 - 100;
 
-    CGFloat width = [self frame].size.width - 30 - 150;
-    CGFloat height = [self frame].size.height - 30 - 100;
-
-    NSValue *point = [NSValue valueWithPoint:NSMakePoint(x*width + 15, y*height + 15 + 100)];
-    [points addObject:point];
-    [pool release];
+        NSValue *point = [NSValue valueWithPoint:NSMakePoint(x*width + 15, y*height + 15 + 100)];
+        [points addObject:point];
+    }
 
     [self setNeedsDisplay:YES];
 }
@@ -109,11 +108,6 @@
 
 - (void)setHintText:(const char*)str {
     strcpy(hintText, str);
-}
-
-- (void)dealloc {
-    [points release];
-    [super dealloc];
 }
 
 @end

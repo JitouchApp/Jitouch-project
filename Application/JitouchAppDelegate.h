@@ -25,13 +25,13 @@
 @class Gesture;
 
 @interface JitouchAppDelegate : NSObject <NSApplicationDelegate> {
-    NSWindow *window;
+    NSWindow *__weak window;
     Gesture *gesture;
     NSMenu *theMenu;
     NSStatusItem *theItem;
 }
 
-@property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSWindow *window;
 
 @end
 

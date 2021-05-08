@@ -101,9 +101,4 @@ static float magicMouseHeight = 800;
     [self refresh];
 }
 
-- (void)dealloc {
-    [tf release];
-    [super dealloc];
-}
-
 @end

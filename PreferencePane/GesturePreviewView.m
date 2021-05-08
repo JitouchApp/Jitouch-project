@@ -1185,9 +1185,4 @@ static void setFGx(FingerGesture *out, float x1, float y1, float x2, float y2, f
     [timer invalidate];
 }
 
-- (void)dealloc {
-    [ges release];
-    [super dealloc];
-}
-
 @end

@@ -53,12 +53,8 @@
     [copy setWindowRef:windowRef];
     return copy;
 }
-- (void) dealloc {
-    CFRelease(windowRef);
-    [super dealloc];
-}
 - (BOOL) isEqual:(id)other {
-    return CFEqual(windowRef, other);
+    return CFEqual(windowRef, (__bridge CFTypeRef)(other));
 }
 
 - (NSUInteger) hash {

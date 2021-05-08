@@ -27,9 +27,9 @@
     NSImage *tabImage;
 }
 
-@property (nonatomic, retain) NSImage *moveImage;
-@property (nonatomic, retain) NSImage *resizeImage;
-@property (nonatomic, retain) NSImage *tabImage;
+@property (nonatomic, strong) NSImage *moveImage;
+@property (nonatomic, strong) NSImage *resizeImage;
+@property (nonatomic, strong) NSImage *tabImage;
 
 @end
 

@@ -44,7 +44,6 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [[self window] removeChildWindow:localAttachedWindow];
                 [localAttachedWindow orderOut:self];
-                [localAttachedWindow release];
             });
         });
         attachedWindow = nil;
@@ -106,13 +105,9 @@
         if (attachedWindow) {
             [[self window] removeChildWindow:attachedWindow];
             [attachedWindow orderOut:self];
-            [attachedWindow release];
-            //attachedWindow = nil;
         }
 
         attachedWindow = newAttachedWindow;
-
-        [gesturePreviewView release];
 
     } else if (scroll) {
         if (attachedWindow) {
@@ -185,13 +180,6 @@
 - (void)willUnselect {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSViewBoundsDidChangeNotification object:nil];
     [self hidePreview];
-}
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSViewBoundsDidChangeNotification object:nil];
-    [attachedWindow release];
-    [gestures release];
-    [super dealloc];
 }
 
 @end
