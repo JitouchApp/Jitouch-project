@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D3182E756BC0097B82D8148 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DB2999C6C42D80AD792CAD /* Pods_Application.framework */; };
 		A6B69AA0B89C02A8E216FFD4 /* Pods_PreferencePane.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF46A539363448A981F4DCC /* Pods_PreferencePane.framework */; };
+		F333EA08265A6F6500DC5690 /* io.github.jitouchproject.Jitouch.plist in Resources */ = {isa = PBXBuildFile; fileRef = F333EA07265A6F6500DC5690 /* io.github.jitouchproject.Jitouch.plist */; };
 		F37F26C72641B9F2000A9093 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F37F26C62641B9F2000A9093 /* Media.xcassets */; };
 		F37F26ED2641BA63000A9093 /* JitouchPref.h in Headers */ = {isa = PBXBuildFile; fileRef = F37F26CF2641BA62000A9093 /* JitouchPref.h */; };
 		F37F26EE2641BA63000A9093 /* GesturePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37F26D02641BA62000A9093 /* GesturePreviewView.m */; };
@@ -86,6 +87,7 @@
 		B8DB2999C6C42D80AD792CAD /* Pods_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3EC7850319B90435ACE902 /* Pods-Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application.release.xcconfig"; path = "Target Support Files/Pods-Application/Pods-Application.release.xcconfig"; sourceTree = "<group>"; };
 		D743A7424B43709E8F43194A /* Pods-PreferencePane.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PreferencePane.debug.xcconfig"; path = "Target Support Files/Pods-PreferencePane/Pods-PreferencePane.debug.xcconfig"; sourceTree = "<group>"; };
+		F333EA07265A6F6500DC5690 /* io.github.jitouchproject.Jitouch.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = io.github.jitouchproject.Jitouch.plist; path = PreferencePane/io.github.jitouchproject.Jitouch.plist; sourceTree = "<group>"; };
 		F37F26B02641B960000A9093 /* Jitouch.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jitouch.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37F26C62641B9F2000A9093 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = PreferencePane/Media.xcassets; sourceTree = "<group>"; };
 		F37F26CF2641BA62000A9093 /* JitouchPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JitouchPref.h; path = PreferencePane/JitouchPref.h; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		F37F276B2641BE16000A9093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Application/Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F37F276C2641BE16000A9093 /* JitouchIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = JitouchIcon.icns; path = Application/JitouchIcon.icns; sourceTree = "<group>"; };
 		F37F27792641BE25000A9093 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		F3DF7892264D3FB80080F27D /* JitouchRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = JitouchRelease.entitlements; path = Application/JitouchRelease.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +273,7 @@
 		F37F270C2641BA85000A9093 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F333EA07265A6F6500DC5690 /* io.github.jitouchproject.Jitouch.plist */,
 				F37F270D2641BA9B000A9093 /* Info.plist */,
 				F37F27102641BA9B000A9093 /* jitouchicon.icns */,
 				F37F270E2641BA9B000A9093 /* JitouchPref.xib */,
@@ -292,9 +296,9 @@
 		F37F27252641BD66000A9093 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				F3DF7892264D3FB80080F27D /* JitouchRelease.entitlements */,
 				F37F27742641BE24000A9093 /* Frameworks */,
 				F37F27662641BE0A000A9093 /* Resources */,
-				F37F27652641BDFA000A9093 /* Jitouch_Prefix.pch */,
 				F37F27562641BDF1000A9093 /* CursorView.h */,
 				F37F27512641BDF1000A9093 /* CursorView.m */,
 				F37F27592641BDF1000A9093 /* CursorWindow.h */,
@@ -305,17 +309,18 @@
 				F37F27472641BDF1000A9093 /* GestureView.m */,
 				F37F274B2641BDF1000A9093 /* GestureWindow.h */,
 				F37F27492641BDF1000A9093 /* GestureWindow.m */,
+				F37F27652641BDFA000A9093 /* Jitouch_Prefix.pch */,
 				F37F27542641BDF1000A9093 /* JitouchAppDelegate.h */,
 				F37F274C2641BDF1000A9093 /* JitouchAppDelegate.m */,
 				F37F274E2641BDF1000A9093 /* KeyUtility.h */,
 				F37F274A2641BDF1000A9093 /* KeyUtility.m */,
+				F37F27692641BE16000A9093 /* main.m */,
 				F37F27482641BDF1000A9093 /* Settings.h */,
 				F37F27552641BDF1000A9093 /* Settings.m */,
 				F37F27572641BDF1000A9093 /* SizeHistory.h */,
 				F37F274D2641BDF1000A9093 /* SizeHistory.m */,
 				F37F27502641BDF1000A9093 /* SystemEvents.h */,
 				F37F27582641BDF1000A9093 /* SystemPreferences.h */,
-				F37F27422641BDE4000A9093 /* Media.xcassets */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -326,8 +331,8 @@
 				F37F27672641BE16000A9093 /* Info.plist */,
 				F37F27682641BE16000A9093 /* instructions.html */,
 				F37F276C2641BE16000A9093 /* JitouchIcon.icns */,
-				F37F27692641BE16000A9093 /* main.m */,
 				F37F276A2641BE16000A9093 /* MainMenu.xib */,
+				F37F27422641BDE4000A9093 /* Media.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F37F27812641C169000A9093 /* Jitouch.app in Resources */,
+				F333EA08265A6F6500DC5690 /* io.github.jitouchproject.Jitouch.plist in Resources */,
 				F37F27122641BA9B000A9093 /* JitouchPref.xib in Resources */,
 				F37F27132641BA9B000A9093 /* jitouchicon.icns in Resources */,
 				F37F26C72641B9F2000A9093 /* Media.xcassets in Resources */,
@@ -743,9 +749,10 @@
 			baseConfigurationReference = D743A7424B43709E8F43194A /* Pods-PreferencePane.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SQBTACHB8R;
 				INFOPLIST_FILE = PreferencePane/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -765,9 +772,10 @@
 			baseConfigurationReference = 6AF5AEA065D92EC75048676B /* Pods-PreferencePane.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SQBTACHB8R;
 				INFOPLIST_FILE = PreferencePane/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -790,9 +798,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = Application/Jitouch.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SQBTACHB8R;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -816,10 +826,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = Application/Jitouch.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = Application/JitouchRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SQBTACHB8R;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

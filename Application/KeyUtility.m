@@ -20,6 +20,7 @@
  */
 
 #import "KeyUtility.h"
+#import "Gesture.h"
 #import <Carbon/Carbon.h>
 
 // to suppress "'CGPostKeyboardEvent' is deprecated" warnings
@@ -67,28 +68,61 @@ static void languageChanged(CFNotificationCenterRef center, void *observer, CFSt
 }
 
 - (void)simulateKeyCode:(CGKeyCode)code ShftDown:(BOOL)shft CtrlDown:(BOOL)ctrl AltDown:(BOOL)alt CmdDown:(BOOL)cmd {
+    // CGEventTapPostEvent, CGEventPost, CGEventCreateKeyboardEvent, CGEventKeyboardSetUnicodeString
+    //CGEventSourceRef source = CGEventSourceCreate(kCGEventSourceStatePrivate);
+    	
+    if (shft) {
+        CGPostKeyboardEvent((CGCharCode)0, 56, true);
+        // CGEventRef event = CGEventCreateKeyboardEvent(source, (CGKeyCode)56, true);
+        // CGEventPost(kCGHIDEventTap, event);
+    }
 
-     if (shft)
-     CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)56, true);
-     if (ctrl)
-     CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)59, true);
-     if (alt)
-     CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)58, true);
-     if (cmd)
-     CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)55, true);
+    if (ctrl) {
+        CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)59, true);
+        // CGEventRef event = CGEventCreateKeyboardEvent(source, (CGKeyCode)59, true);
+        // CGEventPost(kCGHIDEventTap, event);
+    }
+    
+    if (alt) {
+        CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)58, true);
+        // CGEventRef event = CGEventCreateKeyboardEvent(source, (CGKeyCode)58, true);
+        // CGEventPost(kCGHIDEventTap, event);
+    }
+        
+    if (cmd) {
+        CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)55, true);
+        // CGEventRef event = CGEventCreateKeyboardEvent(source, (CGKeyCode)55, true);
+        // CGEventPost(kCGHIDEventTap, event);
+    }
 
-     CGPostKeyboardEvent((CGCharCode)0, a[code], true);
-     CGPostKeyboardEvent((CGCharCode)0, a[code], false);
+    CGPostKeyboardEvent((CGCharCode)0, a[code], true);
+    // CGEventRef event = CGEventCreateKeyboardEvent(source, (CGKeyCode)a[code], true);
+    // CGEventPost(kCGHIDEventTap, event);
+    
+    CGPostKeyboardEvent((CGCharCode)0, a[code], false);
+    // event = CGEventCreateKeyboardEvent(source, (CGKeyCode)a[code], false);
+    // CGEventPost(kCGSessionEventTap, event);
 
-     if (shft)
-     CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)56, false);
-     if (ctrl)
-     CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)59, false);
-     if (alt)
-     CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)58, false);
-     if (cmd)
-     CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)55, false);
-
+    if (shft) {
+        CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)56, false);
+        // CGEventRef event = CGEventCreateKeyboardEvent(source, (CGKeyCode)56, false);
+        // CGEventPost(kCGHIDEventTap, event);
+    }
+    if (ctrl) {
+        CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)59, false);
+        // CGEventRef event = CGEventCreateKeyboardEvent(source, (CGKeyCode)59, false);
+        // CGEventPost(kCGHIDEventTap, event);
+    }
+    if (alt) {
+        CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)58, false);
+        // CGEventRef event = CGEventCreateKeyboardEvent(source, (CGKeyCode)58, false);
+        // CGEventPost(kCGHIDEventTap, event);
+    }
+    if (cmd) {
+        CGPostKeyboardEvent((CGCharCode)0, (CGKeyCode)55, false);
+        // CGEventRef event = CGEventCreateKeyboardEvent(source, (CGKeyCode)55, false);
+        // CGEventPost(kCGHIDEventTap, event);
+    }
 }
 
 - (void) simulateKey:(NSString *)key ShftDown:(BOOL)shft CtrlDown:(BOOL)ctrl AltDown:(BOOL)alt CmdDown:(BOOL)cmd {
