@@ -34,7 +34,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      launchStyle = "0"
+      launchStyle = "1"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
@@ -42,7 +42,7 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         FilePath = "/Users/dhe/Applications/System Preferences (debug).app">
+         FilePath = "/System/Library/Frameworks/PreferencePanes.framework/Versions/A/XPCServices/legacyLoader-arm64.xpc/Contents/MacOS/legacyLoader-arm64">
       </PathRunnable>
    </LaunchAction>
    <ProfileAction
