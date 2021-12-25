@@ -1,9 +1,23 @@
-//
-//  MAAttachedWindow.m
-//
-//  Created by Matt Gemmell on 27/09/2007.
-//  Copyright 2007 Magic Aubergine.
-//
+/*
+ * This file is part of Jitouch.
+ *
+ * Copyright 2007 Magic Aubergine
+ * Copyright 2021 Aaron Kollasch
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * Jitouch is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * Jitouch is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * Jitouch. If not, see <https://www.gnu.org/licenses/>.
+ */
 
 #import "MAAttachedWindow.h"
 
@@ -320,24 +334,14 @@
 
 - (NSColor *)_backgroundColorPatternImage
 {
-    NSImage *bg = [[NSImage alloc] initWithSize:[self frame].size];
-    NSRect bgRect = NSZeroRect;
-    bgRect.size = [bg size];
-
-    [bg lockFocus];
-    NSBezierPath *bgPath = [self _backgroundPath];
-    [NSGraphicsContext saveGraphicsState];
-    [bgPath addClip];
-
-    // Draw background.
-    [_MABackgroundColor set];
-    [bgPath fill];
-    //[bgPath stroke];
-
-    [NSGraphicsContext restoreGraphicsState];
-    [bg unlockFocus];
-
-    return [NSColor colorWithPatternImage:bg];
+    // TODO: Consider restoring old visual style
+    // using imageWithSize:flipped:drawingHandler e.g.:
+    /*
+    NSImage *bg = [NSImage imageWithSize:[self frame].size
+                                 flipped:NO
+                          drawingHandler:???];
+    */
+    return [NSColor lightGrayColor];  // Return static color for now.
 }
 
 

@@ -15,13 +15,12 @@ License: GPL-3.0-or-later
 
 
 ### Third-party
-# Files that originate from elsewhere, but are not availabe e.g. via CocoaPods
+# Files that originate from elsewhere, but are not available e.g. via CocoaPods
 
 # MAAttachedWindow
 # Matt Gemmell kindly re-licensed MAAttachedWindow for inclusion in Jitouch, to
 # avoid uncertain compatibility between his custom BSD-like license and GPL-3.0
 Files: PreferencePane/MAAttachedWindow.h
-       PreferencePane/MAAttachedWindow.m
 Copyright: 2007 Magic Aubergine
 License: GPL-3.0-or-later
 
