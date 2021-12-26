@@ -47,6 +47,11 @@ Files: .github/workflows/reuse-compliance.yml
 Copyright: 2021 Jitouch Project <jitouch@gmail.com>
 License: GPL-3.0-or-later
 
+# Makefile
+Files: Makefile
+Copyright: 2021 Jitouch Project <jitouch@gmail.com>
+License: GPL-3.0-or-later
+
 # Interface Builder
 Files: **/*.xib
 Copyright: 2021 Jitouch Project <jitouch@gmail.com>
@@ -89,6 +94,11 @@ License: GPL-3.0-or-later
 # CocoaPods
 Files: Podfile
        Podfile.lock
+Copyright: 2021 Jitouch Project <jitouch@gmail.com>
+License: GPL-3.0-or-later
+
+# appdmg configuration
+Files: appdmg.json
 Copyright: 2021 Jitouch Project <jitouch@gmail.com>
 License: GPL-3.0-or-later
 
