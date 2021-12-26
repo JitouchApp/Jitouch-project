@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Debug Build
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cache — Node.js
+        id: cache-node
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Dependencies — Node.js
+        if: steps.cache-node.outputs.cache-hit != 'true'
+        run:
+          npm install -g appdmg
+
+      - name: Cache — CocoaPods
+        id: cache-cocoapods
+        uses: actions/cache@v2
+        with:
+          path: Pods
+          key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pods-
+
+      - name: Dependencies — CocoaPods
+        if: steps.cache-cocoapods.outputs.cache-hit != 'true'
+        run:
+          pod install --verbose
+
+      - name: Build
+        run:
+          make clean build | xcpretty && exit ${PIPESTATUS[0]}
+
+      - name: DMG
+        run:
+          make dist
+
+      - name: Filename
+        id: filename
+        uses: actions/github-script@v5
+        with:
+          script: return "${{ github.repository }}".replace(/\//, "-") + "-${{ github.ref_name }}-".replace(/\//, "-") + "${{ github.sha }}".slice(0, 7)
+          result-encoding: string
+
+      - name: Archive
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{steps.filename.outputs.result}}
+          path: Jitouch.dmg
