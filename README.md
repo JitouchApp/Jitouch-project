@@ -32,7 +32,7 @@ To build or modify Jitouch, please install the necessary prerequisits and then f
     ```
 2. Install the dependencies:
     ```bash
-    cocoapods install
+    pod install
     ```
 3. Either open the project in Xcode:
     ```bash
