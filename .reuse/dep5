@@ -97,6 +97,11 @@ Files: Podfile
 Copyright: 2021 Jitouch Project <jitouch@gmail.com>
 License: GPL-3.0-or-later
 
+# NPM
+Files: package*.json
+Copyright: 2021 Jitouch Project <jitouch@gmail.com>
+License: GPL-3.0-or-later
+
 # appdmg configuration
 Files: appdmg.json
 Copyright: 2021 Jitouch Project <jitouch@gmail.com>
