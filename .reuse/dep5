@@ -42,8 +42,8 @@ Files: .gitignore
 Copyright: 2021 Jitouch Project <jitouch@gmail.com>
 License: GPL-3.0-or-later
 
-# Reuse compliance workflow
-Files: .github/workflows/reuse-compliance.yml
+# GitHub workflows
+Files: .github/workflows/*.yml
 Copyright: 2021 Jitouch Project <jitouch@gmail.com>
 License: GPL-3.0-or-later
 
