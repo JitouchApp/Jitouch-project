@@ -1,5 +1,6 @@
-# Cocoapods
+# Dependencies
 Pods/
+node_modules/
 
 # Xcode
 project.xcworkspace
@@ -7,3 +8,8 @@ xcuserdata
 
 # xcodebuild
 build/
+
+# build artifacts
+DerivedData/
+Jitouch.dmg
+

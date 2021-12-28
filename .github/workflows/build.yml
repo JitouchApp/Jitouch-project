@@ -27,7 +27,7 @@ jobs:
       - name: Dependencies — Node.js
         if: steps.cache-node.outputs.cache-hit != 'true'
         run:
-          npm install -g appdmg
+          npm install appdmg
 
       - name: Cache — CocoaPods
         id: cache-cocoapods
