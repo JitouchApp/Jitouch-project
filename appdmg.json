@@ -1,0 +1,13 @@
+{
+  "title": "Jitouch",
+  "icon": "Application/JitouchIcon.icns",
+  "icon-size": 128,
+  "window": {
+	  "position": { "x": 512, "y": 512 },
+	  "size": { "width": 384, "height": 192 }
+  },
+  "contents": [
+    { "x": 0, "y": 0, "type": "file", "path": "DerivedData/Build/Products/Debug/Jitouch.prefPane" },
+    { "x": 192, "y": 0, "type": "file", "path": "LICENSE" }
+  ]
+}
