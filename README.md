@@ -24,6 +24,11 @@ To build or modify Jitouch, please install the necessary prerequisits and then f
 4. **pre-commit** (recommended for contributors)
     - `brew install pre-commit`
     - or follow the [official instructions](https://pre-commit.com/index.html#installation)
+5. **npm** (required for release builds)
+    - `brew install npm`
+6. **appdmg** (required for release builds)
+    - `npm install -g appdmg`
+
 
 ### Building
 1. Clone this repository:
@@ -47,11 +52,11 @@ To build or modify Jitouch, please install the necessary prerequisits and then f
 
 4. Or compile from the shell:
     ```bash
-    xcodebuild -workspace Jitouch.xcworkspace -scheme PreferencePane
+    make build
     ````
 5. Install and run:
     ```bash
-    open ~/Library/Developer/Xcode/DerivedData/Jitouch-*/Build/Products/Debug/Jitouch.prefPane
+    open DerivedData//Build/Products/Debug/Jitouch.prefPane
     ```
 
 ## Contributing
