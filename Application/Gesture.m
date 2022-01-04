@@ -2626,8 +2626,6 @@ int attemptMT;
         //}
     }
 
-    CFRelease((CFMutableArrayRef)deviceList);
-
     if (!found && attemptMT < 3) {
         [NSTimer scheduledTimerWithTimeInterval:1.0 target:me selector:@selector(updateDevicesMT:) userInfo:nil repeats:NO];
         attemptMT++;
