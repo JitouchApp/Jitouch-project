@@ -1469,7 +1469,7 @@ Gw
                     <slider toolTip="Distance between your Index and Ring fingers" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="547">
                         <rect key="frame" x="70" y="286" width="156" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <sliderCell key="cell" state="on" baseWritingDirection="leftToRight" alignment="left" minValue="25" maxValue="45" doubleValue="33" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="550"/>
+                        <sliderCell key="cell" state="on" baseWritingDirection="leftToRight" alignment="left" minValue="10" maxValue="45" doubleValue="33" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="550"/>
                         <connections>
                             <action selector="change:" target="597" id="617"/>
                         </connections>
